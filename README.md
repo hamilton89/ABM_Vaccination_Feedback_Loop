@@ -5,6 +5,7 @@ Adaptive human behavior was largely absent from COVID-19 models used for decisio
 A common approach to include endogenous behavior is using a feedback loop where behavior changes as a function of disease prevalence. For this project, I adapted a simple SIR model to include a vaccinated state (V). Individuals choose to get vaccinated based on local and global information about the number of vaccinated and infected individuals, respectively. I first adapted the epiDem model in NetLogo and then I adapted a similar model by HSMA in python.
 
 •	epiDem:https://ccl.northwestern.edu/netlogo/models/epiDEMBasic
+
 •	HSMA: https://github.com/hsma-programme/6b_agent_based_simulation_using_mesa/tree/main/6B_Agent_Based_Simulation_using_MESA_Part_1
 
 This project was completed as part of an independent study on agent-based modeling for a PhD in Systems Engineering at Johns Hopkins University.
@@ -18,10 +19,15 @@ Each turtle has an infection state (susceptible, infected, cured, or vaccinated)
 
 **Input variables:**
 The following parameters are from the initial epiDEM model: population size ('initial-people'), infection-chance, recovery-chance, and average-recovery-time. To include a process of vaccination, I added the following input variables: 
+
 •	risk_prob: If vaccinated, multiply the infection chance by this number.
+
 •	local-pro-factor: If most of my nearest neighbors are vaccinated, multiply the probability of getting vaccinated by this number.
+
 •	local-anti-factor: If most of my nearest neighbors are not vaccinated, multiply the probability of getting vaccinated by this number.
+
 •	global-pro-factor: If the population infection prevalence is more than the global-pro-factor-threshold, multiply the probability of getting vaccinated by this number.
+
 •	global-pro-factor-threshold: If the infection prevalence above this number, multiply the probability of getting vaccinated by the global-pro-factor
 
 **Setup procedures:**
@@ -37,7 +43,7 @@ Open ABM_epiDem_v2.nlogo and click setup and go on the interface tab. To run a v
 
 The python code was apdapted from a model by HSMA which uses the mesa library (a library for ABMs) to include a vaccinated state. Individuals are assigned a random vaccine probability which increases by a factor of 1.01 for every time-step the infection prevalence is over 50%. Once their vaccine probability reaches 90%, they enter the vaccinated state, which has a reduced infection chance. 
 
-The python model is similar to the NetLogo model except the time step is in days instead of hours and it uses a different movement pattern. In python, agents move forward through a grid (Moore Neighborhood - 8 directions including diagonals) each day, whereas in NetLogo, they move forward with a 0¬¬–360 degree rotation each hour. I have not yet included the impact of local information (vaccinated peers) or incorporated a second risk group in the python version. 
+The python model is similar to the NetLogo model except the time step is in days instead of hours and it uses a different movement pattern. In python, agents move forward through a grid (Moore Neighborhood - 8 directions including diagonals) each day, whereas in NetLogo, they move forward with a 360 degree rotation each hour. I have not yet included the impact of local information (vaccinated peers) or incorporated a second risk group in the python version. 
 
 **Run Python:**
 Open all three .py files at once and run disease_run_AH.py. This will open a browser; press start. To run a version without vaccination, comment out self.vaccine_prob_inc() and self.vaccinate() in the Agent class step function (lines 100 and 101) in the file disease_model_AH.py. You may need to close the browser and restart the kernel between each run. !
