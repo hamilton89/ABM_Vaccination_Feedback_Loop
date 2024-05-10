@@ -4,7 +4,7 @@ Adaptive human behavior was largely absent from COVID-19 models used for decisio
 
 A common approach to include endogenous behavior is using a feedback loop where behavior changes as a function of disease prevalence. For this project, I adapted a simple SIR model to include a vaccinated state (V). Individuals choose to get vaccinated based on local and global information about the number of vaccinated and infected individuals, respectively. I first adapted the epiDem model in NetLogo and then I adapted a similar model by HSMA in python.
 
-•	epiDem:https://ccl.northwestern.edu/netlogo/models/epiDEMBasic
+•	epiDem: https://ccl.northwestern.edu/netlogo/models/epiDEMBasic
 
 •	HSMA: https://github.com/hsma-programme/6b_agent_based_simulation_using_mesa/tree/main/6B_Agent_Based_Simulation_using_MESA_Part_1
 
