@@ -46,5 +46,5 @@ The python code was apdapted from a model by HSMA which uses the mesa library (a
 The python model is similar to the NetLogo model except the time step is in days instead of hours and it uses a different movement pattern. In python, agents move forward through a grid (Moore Neighborhood - 8 directions including diagonals) each day, whereas in NetLogo, they move forward with a 360 degree rotation each hour. I have not yet included the impact of local information (vaccinated peers) or incorporated a second risk group in the python version. 
 
 **Run Python:**
-Open all three .py files at once and run disease_run_AH.py. This will open a browser; press start. To run a version without vaccination, comment out self.vaccine_prob_inc() and self.vaccinate() in the Agent class step function (lines 100 and 101) in the file disease_model_AH.py. You may need to close the browser and restart the kernel between each run.
+Open all three .py files at once and run disease_run.py. This will open a browser; press start. To run a version without vaccination, comment out self.vaccine_prob_inc() and self.vaccinate() in the Agent class step function (lines 100 and 101) in the file disease_model.py. You may need to close the browser and restart the kernel between each run.
 
