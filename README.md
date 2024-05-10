@@ -1,3 +1,5 @@
+This project was completed as part of an independent study on agent-based modeling for a PhD in Systems Engineering at Johns Hopkins University.
+
 **BACKGROUND**
 
 Adaptive human behavior was largely absent from COVID-19 models used for decision making despite knowledge of its importance in the spread of infectious disease. Human behavior may be incorporated into disease models either exogenously or endogenously. A model with exogenous human behavior may input longitudinal mobility data or change parameters at fixed time points. Correlations between mobility data and health burden may change over time, and changing parameters at fixed time points does not anticipate future behavioral responses. In contrast, including behavior endogenously (as a function of another time-dependent variable within the model) attempts to capture the fluctuating nature of human behavior in response to a changing epidemic. 
@@ -7,8 +9,6 @@ A common approach to include endogenous behavior is using a feedback loop where 
 •	epiDem: https://ccl.northwestern.edu/netlogo/models/epiDEMBasic
 
 •	HSMA: https://github.com/hsma-programme/6b_agent_based_simulation_using_mesa/tree/main/6B_Agent_Based_Simulation_using_MESA_Part_1
-
-This project was completed as part of an independent study on agent-based modeling for a PhD in Systems Engineering at Johns Hopkins University.
 
 **NETLOGO**
 
